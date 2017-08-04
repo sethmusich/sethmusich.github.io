@@ -7,8 +7,22 @@ footer {
     font-size: 10px;
 }
 
+.navbar {
+    background-color: aliceblue;
+
+    
+}
+
+.navbar-toggler{
+    background-color:gainsboro;
+}
+
 .jumbotron {
-     background-color: aliceblue
+     background-color: aliceblue;
+}
+
+.img-jumbo{
+    border-radius: 10px;
 }
  
 
