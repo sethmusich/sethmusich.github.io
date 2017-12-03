@@ -316,3 +316,13 @@ body {
 .table{
     background-color: background: rgba(255,255,255,0.5);
 }
+
+
+
+ #map {
+   width: 80%;
+   height: 400px;
+   background-color: grey;
+     margin-top: 50px;
+     margin-bottom: 50px;
+ }
