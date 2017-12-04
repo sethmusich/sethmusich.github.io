@@ -261,35 +261,47 @@
                 </ul>
             </div>
         </div>
-        <p></p>
-            
-    <div id="map"></div>
-    
-  
+        <p>
         
+            
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  
+    <div id="map"></div>
     <script>
       function initMap() {
-        var nola = {lat: 29.972027, lng: -90.10925299999997};
+        var uluru = {lat: -25.363, lng: 131.044};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 7,
-          center: nola 
+          zoom: 4,
+          center: uluru
         });
         var marker = new google.maps.Marker({
-          position: nola,
-          map: map
+          position: uluru,
+          map: map,
+
         });
       }
+        
     </script>
-   
-    
+    <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYNUL7ZeBmU7vGM04T10ng3SPIO2DLG8g&callback=initMap">
+</script>
+        </p>
         
         
         <div class="row">
-            <a target = "_blank"
+            <a 
+               target = "_blank"
                href="https://drive.google.com/file/d/0B5aI1JzGvRc6bnJyTkpQSlUybXM/view?usp=download" download="SethMusichResume">
   <img border="0" src="img/resume.png" alt="SPMResume" width="140" height="142">
             </a>
         </div>
+        
+        
         
     </section>
     
@@ -313,8 +325,6 @@
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApA1tduCxdq4fQRLbGT8om1W7l8OvqnGk"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/grayscale.min.js"></script>
