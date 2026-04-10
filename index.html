@@ -197,6 +197,18 @@
     .dev-icons {
       margin-bottom: 2rem;
     }
+    .dev-icons .list-inline-item .custom-icon {
+      width: 3rem;
+      height: 3rem;
+      display: block;
+      color: inherit;
+      opacity: 0.85;
+      transition: color 0.15s, opacity 0.15s;
+      filter: invert(24%) sepia(14%) saturate(600%) hue-rotate(180deg) brightness(60%);
+    }
+    .dev-icons .list-inline-item:hover .custom-icon {
+      filter: invert(62%) sepia(60%) saturate(500%) hue-rotate(5deg) brightness(95%);
+    }
 
     /* Skills grid */
     .skills-grid {
@@ -333,6 +345,9 @@
           <li class="list-inline-item" data-label="SF Shield"><i class="fas fa-shield-alt"></i></li>
           <li class="list-inline-item" data-label="Git"><i class="fab fa-git-alt"></i></li>
           <li class="list-inline-item" data-label="GitHub"><i class="fab fa-github"></i></li>
+          <li class="list-inline-item" data-label="Copado"><img src="img/icon-copado.svg" class="custom-icon" alt="Copado"></li>
+          <li class="list-inline-item" data-label="Harness"><img src="img/icon-harness.svg" class="custom-icon" alt="Harness"></li>
+          <li class="list-inline-item" data-label="Gearset"><img src="img/icon-gearset.svg" class="custom-icon" alt="Gearset"></li>
         </ul>
 
       </div>
