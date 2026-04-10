@@ -168,6 +168,36 @@
       border-radius: 3px;
     }
 
+    /* Icon tooltips */
+    .dev-icons .list-inline-item {
+      position: relative;
+    }
+    .dev-icons .list-inline-item::after {
+      content: attr(data-label);
+      position: absolute;
+      bottom: -1.6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1B2E4B;
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05rem;
+      text-transform: uppercase;
+      padding: 0.2rem 0.45rem;
+      border-radius: 3px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s ease;
+    }
+    .dev-icons .list-inline-item:hover::after {
+      opacity: 1;
+    }
+    .dev-icons {
+      margin-bottom: 2rem;
+    }
+
     /* Skills grid */
     .skills-grid {
       display: grid;
@@ -297,12 +327,12 @@
 
         <div class="subheading mb-3">Platforms &amp; Tools</div>
         <ul class="list-inline dev-icons">
-          <li class="list-inline-item" title="Salesforce"><i class="fab fa-salesforce"></i></li>
-          <li class="list-inline-item" title="Google Analytics"><i class="fab fa-google"></i></li>
-          <li class="list-inline-item" title="Splunk"><i class="fas fa-database"></i></li>
-          <li class="list-inline-item" title="Salesforce Shield"><i class="fas fa-shield-alt"></i></li>
-          <li class="list-inline-item" title="Git"><i class="fab fa-git-alt"></i></li>
-          <li class="list-inline-item" title="GitHub"><i class="fab fa-github"></i></li>
+          <li class="list-inline-item" data-label="Salesforce"><i class="fab fa-salesforce"></i></li>
+          <li class="list-inline-item" data-label="Google Analytics"><i class="fab fa-google"></i></li>
+          <li class="list-inline-item" data-label="Splunk"><i class="fas fa-database"></i></li>
+          <li class="list-inline-item" data-label="SF Shield"><i class="fas fa-shield-alt"></i></li>
+          <li class="list-inline-item" data-label="Git"><i class="fab fa-git-alt"></i></li>
+          <li class="list-inline-item" data-label="GitHub"><i class="fab fa-github"></i></li>
         </ul>
 
       </div>
@@ -329,10 +359,10 @@
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
             <h3 class="mb-0">Vistant — <i>Salesforce Program Manager</i></h3>
-            <div class="subheading mb-3">Client: USAID</div>
+            <div class="subheading mb-3">Client: Federal Agency</div>
             <ul>
               <li>Senior administrator for a grantmaking platform serving 100,000+ applicants.</li>
-              <li>Authored technical specifications and architecture documentation aligned to NIST RMF controls.</li>
+              <li>Authored architecture documentation aligned to NIST RMF controls.</li>
               <li>Designed integrations with Google Analytics, Splunk, and Salesforce Shield.</li>
               <li>Established a monthly release cadence and source-driven DevOps process.</li>
             </ul>
@@ -360,8 +390,8 @@
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
             <h3 class="mb-0">Self-Employed — <i>Solution Architect / Consultant</i></h3>
-            <div class="subheading mb-3">Clients: CIEE, Unified Parking Partners, HomeGauge</div>
-            <p>Sole Solution Architect on a 3-month, $50K implementation — handled discovery, configuration, and data migration, then delivered hands-on training to 30 end users at go-live.</p>
+            <div class="subheading mb-3">Clients: Various</div>
+            <p>Sole architect on short-term implementations — discovery, configuration, data migration, and end-user training at go-live.</p>
           </div>
           <div class="resume-date text-md-right">
             <span class="text-primary">November 2019 – June 2020</span>
@@ -371,7 +401,7 @@
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
             <h3 class="mb-0">CDIT — <i>Salesforce Administrator</i></h3>
-            <div class="subheading mb-3">Client: Centers for Medicare</div>
+            <div class="subheading mb-3">Client: Federal Agency</div>
             <ul>
               <li>Salesforce Administrator on a 5-year, $250M managed service contract.</li>
               <li>Built and deployed updates to an Experience Cloud site with 100,000+ users.</li>
@@ -411,8 +441,8 @@
             </div>
             <div class="portfolio-card-body">
               <h3>Service Cloud Messaging &amp; Web Chat</h3>
-              <div class="card-client">Cherokee Federal / Federal Agency</div>
-              <p>Owned requirements gathering, solutioning, UAT, and go-live transition for a digital messaging and web chat channel — part of a 5-year, $50M Service Cloud program.</p>
+              <div class="card-client">Cherokee Federal</div>
+              <p>Requirements gathering, solution design, UAT, and go-live for a Messaging and Web Chat channel — part of a 5-year, $50M Service Cloud program.</p>
               <div class="portfolio-tags">
                 <span class="portfolio-tag">Service Cloud</span>
                 <span class="portfolio-tag">Digital Engagement</span>
@@ -428,8 +458,8 @@
             </div>
             <div class="portfolio-card-body">
               <h3>Grantmaking Platform &amp; Compliance Architecture</h3>
-              <div class="card-client">Vistant / USAID</div>
-              <p>Senior administrator for a grantmaking platform serving 100,000+ applicants. Authored architecture documentation to NIST RMF standards and designed integrations with Google Analytics, Splunk, and Salesforce Shield.</p>
+              <div class="card-client">Vistant</div>
+              <p>Senior administrator for a 100,000+ user grantmaking platform. Authored NIST RMF-aligned architecture docs and designed integrations with Google Analytics, Splunk, and Shield.</p>
               <div class="portfolio-tags">
                 <span class="portfolio-tag">NIST RMF</span>
                 <span class="portfolio-tag">Splunk</span>
@@ -446,8 +476,8 @@
             </div>
             <div class="portfolio-card-body">
               <h3>$3M Federal Salesforce Implementation</h3>
-              <div class="card-client">Guidehouse / US Department of State</div>
-              <p>Solution Architect and team lead on a 2-year, $3M engagement. Led discovery, defined the full architecture, and managed a team of four developers from build through launch.</p>
+              <div class="card-client">Guidehouse</div>
+              <p>Solution Architect on a 2-year, $3M federal engagement — led discovery, defined the architecture, and managed four developers from build through launch.</p>
               <div class="portfolio-tags">
                 <span class="portfolio-tag">Solution Architecture</span>
                 <span class="portfolio-tag">Discovery &amp; Design</span>
@@ -463,8 +493,8 @@
             </div>
             <div class="portfolio-card-body">
               <h3>Experience Cloud — Large-Scale CMS Deployment</h3>
-              <div class="card-client">CDIT / Centers for Medicare</div>
-              <p>Built and deployed updates to a 100,000+ user Experience Cloud site as part of a $250M managed service contract for Centers for Medicare.</p>
+              <div class="card-client">CDIT</div>
+              <p>Built and deployed updates to a 100,000+ user Experience Cloud site on a $250M federal managed service contract.</p>
               <div class="portfolio-tags">
                 <span class="portfolio-tag">Experience Cloud</span>
                 <span class="portfolio-tag">CMS</span>
