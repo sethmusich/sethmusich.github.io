@@ -24,6 +24,17 @@
   <link href="css/resume.min.css" rel="stylesheet">
 
   <style>
+    /* Override excessive min-height so sections don't force full viewport height */
+    @media (min-width: 768px) {
+      section.resume-section {
+        min-height: unset !important;
+      }
+    }
+    section.resume-section {
+      padding-top: 3rem !important;
+      padding-bottom: 3rem !important;
+    }
+
     /* Section accent */
     section.resume-section h2 {
       position: relative;
@@ -73,8 +84,9 @@
       font-size: 0.9rem;
     }
     .cert-item i {
-      color: #f0a500;
+      color: #00A1E0;
       flex-shrink: 0;
+      font-size: 1.1rem;
     }
     .other-certs {
       display: flex;
@@ -122,6 +134,8 @@
     .portfolio-card-banner.banner-blue   { background-color: #2d3e8c; }
     .portfolio-card-banner.banner-teal   { background-color: #1a6e6e; }
     .portfolio-card-banner.banner-slate  { background-color: #3d4f6b; }
+    .portfolio-card-banner.banner-green  { background-color: #1e5c3a; }
+    .portfolio-card-banner.banner-orange { background-color: #8c4a1a; }
     .portfolio-card-banner.banner-cdit   { background-color: #f5f5f5; }
     .portfolio-card-banner .banner-icon {
       font-size: 4rem;
@@ -422,6 +436,39 @@
             </div>
           </div>
 
+          <div class="portfolio-card">
+            <div class="portfolio-card-banner banner-green">
+              <i class="fas fa-map-marker-alt banner-icon"></i>
+            </div>
+            <div class="portfolio-card-body">
+              <h3>Locator CRM &amp; Website</h3>
+              <div class="card-client">Personal Project</div>
+              <p>Built a full-stack CRM and public-facing website for location-based search and management. Designed and developed end-to-end, including data model, UI, and deployment.</p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">CRM</span>
+                <span class="portfolio-tag">Web Development</span>
+                <span class="portfolio-tag">Full Stack</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-card-banner banner-orange">
+              <i class="fas fa-chalkboard-teacher banner-icon"></i>
+            </div>
+            <div class="portfolio-card-body">
+              <h3>End-to-End Salesforce Implementation &amp; Training</h3>
+              <div class="card-client">Self-Employed / CIEE</div>
+              <p>Solo Solution Architect on a 3-month/$50K Salesforce build — handled discovery, configuration, data migration, and go-live. Delivered hands-on training for 30 end users post-launch.</p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Solution Architecture</span>
+                <span class="portfolio-tag">Configuration</span>
+                <span class="portfolio-tag">Data Migration</span>
+                <span class="portfolio-tag">Training</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -512,16 +559,16 @@
 
         <div class="subheading mb-3">Salesforce (10)</div>
         <div class="certs-grid">
-          <div class="cert-item"><i class="fa fa-trophy"></i>Public Sector Solutions Accredited Professional</div>
-          <div class="cert-item"><i class="fa fa-trophy"></i>Administrator</div>
-          <div class="cert-item"><i class="fa fa-trophy"></i>Advanced Administrator</div>
-          <div class="cert-item"><i class="fa fa-trophy"></i>Platform App Builder</div>
-          <div class="cert-item"><i class="fa fa-trophy"></i>Sales Cloud Consultant</div>
-          <div class="cert-item"><i class="fa fa-trophy"></i>Service Cloud Consultant</div>
-          <div class="cert-item"><i class="fa fa-trophy"></i>Experience Cloud Consultant</div>
-          <div class="cert-item"><i class="fa fa-trophy"></i>Business Analyst</div>
-          <div class="cert-item"><i class="fa fa-trophy"></i>Strategy Designer</div>
-          <div class="cert-item"><i class="fa fa-trophy"></i>AI Associate</div>
+          <div class="cert-item"><i class="fab fa-salesforce"></i>Public Sector Solutions Accredited Professional</div>
+          <div class="cert-item"><i class="fab fa-salesforce"></i>Administrator</div>
+          <div class="cert-item"><i class="fab fa-salesforce"></i>Advanced Administrator</div>
+          <div class="cert-item"><i class="fab fa-salesforce"></i>Platform App Builder</div>
+          <div class="cert-item"><i class="fab fa-salesforce"></i>Sales Cloud Consultant</div>
+          <div class="cert-item"><i class="fab fa-salesforce"></i>Service Cloud Consultant</div>
+          <div class="cert-item"><i class="fab fa-salesforce"></i>Experience Cloud Consultant</div>
+          <div class="cert-item"><i class="fab fa-salesforce"></i>Business Analyst</div>
+          <div class="cert-item"><i class="fab fa-salesforce"></i>Strategy Designer</div>
+          <div class="cert-item"><i class="fab fa-salesforce"></i>AI Associate</div>
         </div>
 
         <div class="subheading mb-3">Other</div>
