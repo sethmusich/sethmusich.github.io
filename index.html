@@ -10,6 +10,8 @@
 
   <title>Seth Musich, Salesforce Consultant</title>
 
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -20,6 +22,179 @@
 
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
+
+  <style>
+    /* Section accent */
+    section.resume-section h2 {
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    section.resume-section h2::after {
+      content: '';
+      display: block;
+      width: 3rem;
+      height: 4px;
+      background: #4653C2;
+      margin-top: 0.5rem;
+      border-radius: 2px;
+    }
+
+    /* Experience item cleanup */
+    .resume-item {
+      padding-bottom: 1.5rem;
+    }
+    .resume-item h3 {
+      color: #343a40;
+      font-size: 1.4rem;
+    }
+    .resume-item ul {
+      padding-left: 1.2rem;
+    }
+    .resume-item ul li {
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    /* Certifications grid */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #f8f9fa;
+      border-left: 3px solid #4653C2;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0 4px 4px 0;
+      font-size: 0.9rem;
+    }
+    .cert-item i {
+      color: #f0a500;
+      flex-shrink: 0;
+    }
+    .other-certs {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .other-cert-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #343a40;
+      color: #fff;
+      padding: 0.4rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+    .other-cert-item i { color: #f0a500; }
+
+    /* Portfolio Cards */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .portfolio-card {
+      border: 1px solid #dee2e6;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .portfolio-card-banner {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .portfolio-card-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .portfolio-card-banner.banner-blue   { background-color: #2d3e8c; }
+    .portfolio-card-banner.banner-teal   { background-color: #1a6e6e; }
+    .portfolio-card-banner.banner-slate  { background-color: #3d4f6b; }
+    .portfolio-card-banner.banner-cdit   { background-color: #f5f5f5; }
+    .portfolio-card-banner .banner-icon {
+      font-size: 4rem;
+      color: rgba(255,255,255,0.7);
+    }
+    .portfolio-card-body {
+      padding: 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .portfolio-card-body h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+    .portfolio-card-body .card-client {
+      font-size: 0.85rem;
+      color: #4653C2;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      margin-bottom: 0.75rem;
+    }
+    .portfolio-card-body p {
+      font-size: 0.9rem;
+      flex: 1;
+      margin-bottom: 0.75rem;
+    }
+    .portfolio-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .portfolio-tag {
+      background-color: #e9ecef;
+      color: #495057;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+    }
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 767px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+    }
+    .skills-group h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08rem;
+      color: #4653C2;
+      border-bottom: 2px solid #4653C2;
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.75rem;
+    }
+    .skills-group ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .skills-group ul li {
+      padding: 0.3rem 0;
+      font-size: 0.95rem;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .skills-group ul li:last-child { border-bottom: none; }
+  </style>
 
 </head>
 
@@ -177,42 +352,77 @@
       <div class="w-100">
         <h2 class="mb-5">Portfolio Projects</h2>
 
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Service Cloud Messaging &amp; Web Chat Implementation</h3>
-            <div class="subheading mb-3">Cherokee Federal / Federal Agency</div>
-            <p>Led end-to-end delivery of a Messaging-App and Web Chat service as part of a 5-year $50M Service Cloud program. Responsibilities included requirements gathering, solutioning, UAT coordination, and go-live transition planning.</p>
-            <p><strong>Tools &amp; Skills:</strong> Salesforce Service Cloud, Digital Engagement, UAT, Stakeholder Management</p>
-          </div>
-        </div>
+        <div class="portfolio-grid">
 
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Grantmaking Platform — NIST-Compliant Architecture</h3>
-            <div class="subheading mb-3">Vistant / USAID</div>
-            <p>Served as senior administrator for a grantmaking Salesforce environment supporting 100,000+ applicants. Authored technical architecture documentation aligned to NIST RMF controls and designed integrations with Google Analytics, Splunk, and Shield.</p>
-            <p><strong>Tools &amp; Skills:</strong> Salesforce Platform, Splunk, Google Analytics, Shield, NIST RMF, DevOps, Technical Architecture</p>
+          <div class="portfolio-card">
+            <div class="portfolio-card-banner banner-blue">
+              <i class="fas fa-comments banner-icon"></i>
+            </div>
+            <div class="portfolio-card-body">
+              <h3>Service Cloud Messaging &amp; Web Chat</h3>
+              <div class="card-client">Cherokee Federal / Federal Agency</div>
+              <p>Led end-to-end delivery of a Messaging-App and Web Chat service as part of a 5-year $50M Service Cloud program — from requirements gathering and solutioning through UAT and go-live transition.</p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Service Cloud</span>
+                <span class="portfolio-tag">Digital Engagement</span>
+                <span class="portfolio-tag">UAT</span>
+                <span class="portfolio-tag">Stakeholder Management</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">$3M Federal Salesforce Implementation</h3>
-            <div class="subheading mb-3">Guidehouse / US Department of State</div>
-            <p>Solution Architect and team lead for a 2-year, $3M Salesforce implementation. Led the discovery phase, designed the solution architecture, and managed a team of 4 developers through build and delivery.</p>
-            <p><strong>Tools &amp; Skills:</strong> Salesforce CRM, Solution Architecture, Discovery &amp; Design, Team Leadership, Agile/Scrum</p>
+          <div class="portfolio-card">
+            <div class="portfolio-card-banner banner-teal">
+              <i class="fas fa-shield-alt banner-icon"></i>
+            </div>
+            <div class="portfolio-card-body">
+              <h3>Grantmaking Platform — NIST-Compliant Architecture</h3>
+              <div class="card-client">Vistant / USAID</div>
+              <p>Senior administrator for a grantmaking Salesforce environment supporting 100,000+ applicants. Authored technical architecture docs aligned to NIST RMF controls; designed integrations with Google Analytics, Splunk, and Shield.</p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">NIST RMF</span>
+                <span class="portfolio-tag">Splunk</span>
+                <span class="portfolio-tag">Shield</span>
+                <span class="portfolio-tag">DevOps</span>
+                <span class="portfolio-tag">Technical Architecture</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Experience Cloud Site — Large-Scale CMS Deployment</h3>
-            <div class="subheading mb-3">CDIT / Centers for Medicare</div>
-            <p>Developed and deployed changes to a 100,000+ user Salesforce Experience Cloud site as part of a $250M managed service contract for Centers for Medicare.</p>
-            <p><strong>Tools &amp; Skills:</strong> Salesforce Experience Cloud, CMS, Large-Scale Administration</p>
+          <div class="portfolio-card">
+            <div class="portfolio-card-banner banner-slate">
+              <i class="fas fa-project-diagram banner-icon"></i>
+            </div>
+            <div class="portfolio-card-body">
+              <h3>$3M Federal Salesforce Implementation</h3>
+              <div class="card-client">Guidehouse / US Department of State</div>
+              <p>Solution Architect and team lead for a 2-year, $3M Salesforce implementation. Led discovery, designed the solution architecture, and managed a team of 4 developers from build through delivery.</p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Solution Architecture</span>
+                <span class="portfolio-tag">Discovery &amp; Design</span>
+                <span class="portfolio-tag">Team Leadership</span>
+                <span class="portfolio-tag">Agile/Scrum</span>
+              </div>
+            </div>
           </div>
-        </div>
 
+          <div class="portfolio-card">
+            <div class="portfolio-card-banner banner-cdit">
+              <img src="img/CDIT.png" alt="CDIT">
+            </div>
+            <div class="portfolio-card-body">
+              <h3>Experience Cloud — Large-Scale CMS Deployment</h3>
+              <div class="card-client">CDIT / Centers for Medicare</div>
+              <p>Developed and deployed changes to a 100,000+ user Salesforce Experience Cloud site as part of a $250M managed service contract.</p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Experience Cloud</span>
+                <span class="portfolio-tag">CMS</span>
+                <span class="portfolio-tag">Large-Scale Admin</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -255,36 +465,39 @@
       <div class="w-100">
         <h2 class="mb-5">Skills</h2>
 
-        <div class="subheading mb-3">Consulting &amp; Delivery</div>
-        <ul class="fa-ul mb-4">
-          <li><i class="fa-li fa fa-check"></i>Salesforce Solution Architecture and Design</li>
-          <li><i class="fa-li fa fa-check"></i>Business Process Analysis and Mapping (Current State &amp; Future State)</li>
-          <li><i class="fa-li fa fa-check"></i>Stakeholder Requirements Elicitation and Documentation</li>
-          <li><i class="fa-li fa fa-check"></i>User Acceptance Testing (UAT) Planning and Execution</li>
-          <li><i class="fa-li fa fa-check"></i>End-User Training and Enablement</li>
-          <li><i class="fa-li fa fa-check"></i>Technical, Functional, and Solution Design Documentation</li>
-          <li><i class="fa-li fa fa-check"></i>Pre-Sales Engagements and Agile Sprint Demonstrations</li>
-          <li><i class="fa-li fa fa-check"></i>Data Cleansing and Migration Strategy</li>
-          <li><i class="fa-li fa fa-check"></i>User-Centered Experience Design</li>
-        </ul>
+        <div class="skills-grid mb-5">
+
+          <div class="skills-group">
+            <h4>Client Delivery</h4>
+            <ul>
+              <li>Stakeholder Requirements Elicitation &amp; Documentation</li>
+              <li>Business Process Analysis &amp; Mapping</li>
+              <li>User Acceptance Testing (UAT) Planning &amp; Execution</li>
+              <li>End-User Training &amp; Enablement</li>
+              <li>Pre-Sales Engagements &amp; Sprint Demonstrations</li>
+            </ul>
+          </div>
+
+          <div class="skills-group">
+            <h4>Architecture &amp; Design</h4>
+            <ul>
+              <li>Salesforce Solution Architecture &amp; Design</li>
+              <li>User-Centered Experience Design</li>
+              <li>Technical &amp; Functional Documentation</li>
+              <li>Data Cleansing &amp; Migration Strategy</li>
+              <li>DevOps &amp; Release Management</li>
+            </ul>
+          </div>
+
+        </div>
 
         <div class="subheading mb-3">Platforms &amp; Tools</div>
         <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
-            <i class="fab fa-salesforce"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fas fa-file-excel"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-html5"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-css3-alt"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-github"></i>
-          </li>
+          <li class="list-inline-item"><i class="fab fa-salesforce"></i></li>
+          <li class="list-inline-item"><i class="fas fa-file-excel"></i></li>
+          <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+          <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+          <li class="list-inline-item"><i class="fab fa-github"></i></li>
         </ul>
 
       </div>
@@ -298,24 +511,24 @@
         <h2 class="mb-5">Certifications</h2>
 
         <div class="subheading mb-3">Salesforce (10)</div>
-        <ul class="fa-ul mb-4">
-          <li><i class="fa-li fa fa-trophy text-warning"></i>Public Sector Solutions Accredited Professional</li>
-          <li><i class="fa-li fa fa-trophy text-warning"></i>Administrator</li>
-          <li><i class="fa-li fa fa-trophy text-warning"></i>Advanced Administrator</li>
-          <li><i class="fa-li fa fa-trophy text-warning"></i>Platform App Builder</li>
-          <li><i class="fa-li fa fa-trophy text-warning"></i>Sales Cloud Consultant</li>
-          <li><i class="fa-li fa fa-trophy text-warning"></i>Service Cloud Consultant</li>
-          <li><i class="fa-li fa fa-trophy text-warning"></i>Experience Cloud Consultant</li>
-          <li><i class="fa-li fa fa-trophy text-warning"></i>Business Analyst</li>
-          <li><i class="fa-li fa fa-trophy text-warning"></i>Strategy Designer</li>
-          <li><i class="fa-li fa fa-trophy text-warning"></i>AI Associate</li>
-        </ul>
+        <div class="certs-grid">
+          <div class="cert-item"><i class="fa fa-trophy"></i>Public Sector Solutions Accredited Professional</div>
+          <div class="cert-item"><i class="fa fa-trophy"></i>Administrator</div>
+          <div class="cert-item"><i class="fa fa-trophy"></i>Advanced Administrator</div>
+          <div class="cert-item"><i class="fa fa-trophy"></i>Platform App Builder</div>
+          <div class="cert-item"><i class="fa fa-trophy"></i>Sales Cloud Consultant</div>
+          <div class="cert-item"><i class="fa fa-trophy"></i>Service Cloud Consultant</div>
+          <div class="cert-item"><i class="fa fa-trophy"></i>Experience Cloud Consultant</div>
+          <div class="cert-item"><i class="fa fa-trophy"></i>Business Analyst</div>
+          <div class="cert-item"><i class="fa fa-trophy"></i>Strategy Designer</div>
+          <div class="cert-item"><i class="fa fa-trophy"></i>AI Associate</div>
+        </div>
 
         <div class="subheading mb-3">Other</div>
-        <ul class="fa-ul mb-0">
-          <li><i class="fa-li fa fa-certificate text-warning"></i>Secret Clearance</li>
-          <li><i class="fa-li fa fa-certificate text-warning"></i>Certified Scrum Master (CSM)</li>
-        </ul>
+        <div class="other-certs">
+          <div class="other-cert-item"><i class="fa fa-lock"></i>Secret Clearance</div>
+          <div class="other-cert-item"><i class="fa fa-certificate"></i>Certified Scrum Master (CSM)</div>
+        </div>
 
       </div>
     </section>
