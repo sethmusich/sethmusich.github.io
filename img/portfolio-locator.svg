@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160">
+  <rect width="600" height="160" fill="#1B2E4B"/>
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1.2" fill="rgba(255,255,255,0.07)"/>
+  </pattern>
+  <rect width="600" height="160" fill="url(#dots)"/>
+  <!-- map pin -->
+  <path d="M300 28 C284 28 270 42 270 58 C270 78 300 108 300 108 C300 108 330 78 330 58 C330 42 316 28 300 28 Z" fill="none" stroke="#C9973A" stroke-width="3"/>
+  <circle cx="300" cy="57" r="10" fill="#C9973A" opacity="0.8"/>
+  <!-- subtle map grid lines -->
+  <line x1="240" y1="108" x2="360" y2="108" stroke="#C9973A" stroke-width="1" opacity="0.2"/>
+  <line x1="240" y1="120" x2="360" y2="120" stroke="#C9973A" stroke-width="1" opacity="0.15"/>
+  <line x1="252" y1="104" x2="252" y2="124" stroke="#C9973A" stroke-width="1" opacity="0.15"/>
+  <line x1="280" y1="104" x2="280" y2="124" stroke="#C9973A" stroke-width="1" opacity="0.15"/>
+  <line x1="320" y1="104" x2="320" y2="124" stroke="#C9973A" stroke-width="1" opacity="0.15"/>
+  <line x1="348" y1="104" x2="348" y2="124" stroke="#C9973A" stroke-width="1" opacity="0.15"/>
+  <text x="300" y="148" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="rgba(201,151,58,0.6)" text-anchor="middle" letter-spacing="2.5">CRM · WEB DEVELOPMENT · FULL STACK</text>
+</svg>

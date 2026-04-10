@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160">
+  <rect width="600" height="160" fill="#1B2E4B"/>
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1.2" fill="rgba(255,255,255,0.07)"/>
+  </pattern>
+  <rect width="600" height="160" fill="url(#dots)"/>
+  <!-- shield -->
+  <path d="M300 28 L336 42 L336 80 Q336 108 300 122 Q264 108 264 80 L264 42 Z" fill="none" stroke="#C9973A" stroke-width="3"/>
+  <!-- lock body -->
+  <rect x="288" y="75" width="24" height="20" rx="3" fill="#C9973A" opacity="0.8"/>
+  <!-- lock shackle -->
+  <path d="M292 75 L292 67 Q300 60 308 67 L308 75" fill="none" stroke="#C9973A" stroke-width="3" stroke-linecap="round"/>
+  <!-- keyhole -->
+  <circle cx="300" cy="83" r="3" fill="#1B2E4B"/>
+  <rect x="298" y="84" width="4" height="5" fill="#1B2E4B"/>
+  <text x="300" y="148" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="rgba(201,151,58,0.6)" text-anchor="middle" letter-spacing="2.5">NIST RMF · TECHNICAL ARCHITECTURE</text>
+</svg>
